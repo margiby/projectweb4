@@ -4,10 +4,10 @@ import type { DiagramNode, DiagramEdge } from "../data/flow-types";
 import {
   getLayoutedElements,
   type ElkLayoutOptions,
-} from "../utils/ElkLayout-utils";
+} from "../utils/elkLayout-utils";
 import { BASE_ELK_OPTIONS } from "../data/diagram-constants";
 import { diagramRegistry } from "../utils/diagramRegistry";
-import { useDiagramStore } from "./useDiagramStore";
+import  useDiagramStore from "./useDiagramStore";
 
 /**
  * Custom Hook für die Verwaltung des Diagramm-Layouts
@@ -16,7 +16,7 @@ import { useDiagramStore } from "./useDiagramStore";
  * - Stellt Zustand für React Flow bereit
  */
 
-export const useDiagramLayout = () => {
+const useDiagramLayout = () => {
   // React Flow node/edge state
   const [nodes, setNodes, onNodesChange] = useNodesState<DiagramNode>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<DiagramEdge>([]);
@@ -156,3 +156,5 @@ export const useDiagramLayout = () => {
     flowContainerRef,
   };
 }
+
+export default useDiagramLayout;

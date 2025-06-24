@@ -1,11 +1,11 @@
 
 import { useState, useEffect, ReactElement } from "react";
 import DiagramContainer from "./DiagramContainer";
-import { registerMain } from "./MainDiagram";
-import { registerAllSubdiagrams as registerSubs } from "./Subdiagrams";
+import { registerMain } from "./registryMain";
+import { registerAllSubdiagrams as registerSubs } from "./registrySubdiagrams";
 import { FormattedMessage } from "react-intl";
 import type { FlexibleDiagramConfig } from "./data/flow-types";
-import { useFetch } from "../../../../hooks/useFetch";
+import useFetch from "../../../../hooks/useFetch";
 
 /**
  * Diese Komponente steuert die gesamte Initialisierung der Diagramme.

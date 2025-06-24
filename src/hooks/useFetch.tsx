@@ -10,7 +10,7 @@ type FetchState<T> = {
  * Ein Custom Hook zum Laden von Daten.
  * Er kapselt die grundlegende Fetch-Logik.
  */
-export function useFetch<T>(url: string): FetchState<T> {
+function useFetch<T>(url: string): FetchState<T> {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
@@ -38,3 +38,4 @@ export function useFetch<T>(url: string): FetchState<T> {
 
   return { data, isLoading, error };
 }
+export default useFetch;

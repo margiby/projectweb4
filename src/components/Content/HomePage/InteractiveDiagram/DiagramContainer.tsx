@@ -1,9 +1,9 @@
 import type { ReactElement } from "react";
 import { ReactFlow, Controls } from "@xyflow/react";
 import { FormattedMessage } from "react-intl";
-import { useDiagramLayout } from "./diagrammHooks/useDiagramLayout";
-import { handleNodeClick } from "./diagrammHooks/diagramEventHandler";
-import { useDiagramStore } from "./diagrammHooks/useDiagramStore";
+import useDiagramLayout from "./diagrammHooks/useDiagramLayout";
+import useHandleNodeClick from "./diagrammHooks/useDiagramEventHandler";
+import  useDiagramStore  from "./diagrammHooks/useDiagramStore";
 /**
  * Die Hauptansichtskomponente für das interaktive Diagramm.
  * Sie verwendet den `useDiagramLayout`-Hook für die Logik und Zustandsverwaltung
@@ -76,7 +76,7 @@ const DiagramView = (): ReactElement => {
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
             nodesDraggable={false} // Knoten sind nicht verschiebbar
-            onNodeClick={handleNodeClick} // Handler für Klick-Events auf Knoten
+            onNodeClick={useHandleNodeClick} // Handler für Klick-Events auf Knoten
             // fitView // Sorgt dafür, dass das Diagramm initial eingepasst wird (kann auch über Hook gesteuert werden)
             attributionPosition="bottom-right" // Position der React Flow Attribution
           >
