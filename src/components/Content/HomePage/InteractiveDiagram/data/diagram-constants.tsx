@@ -1,4 +1,4 @@
-import type { ElkLayoutOptions } from "../utils/ElkLayout-utils";
+import type { ElkLayoutOptions } from "../utils/elkLayout-utils";
 import type { NodeDimensions } from "./flow-types";
 
 /**

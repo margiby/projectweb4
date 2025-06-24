@@ -1,5 +1,5 @@
 import type { Node, Edge, Position, EdgeMarker } from "@xyflow/react";
-import type { ElkLayoutOptions } from "../utils/ElkLayout-utils";
+import type { ElkLayoutOptions } from "../utils/elkLayout-utils";
 
 export type NodeDimensions = {
   width: number;

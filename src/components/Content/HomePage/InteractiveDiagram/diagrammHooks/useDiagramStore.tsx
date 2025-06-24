@@ -10,7 +10,9 @@ type Store = {
  * Dieser Store ermöglicht es, die ID des aktuell angezeigten Diagramms zu setzen und abzurufen.
  * Er wird in der gesamten Anwendung verwendet, um den Zustand des Diagramms zu verfolgen.
  */
-export const useDiagramStore = create<Store>((set) => ({
+const useDiagramStore = create<Store>((set) => ({
   diagramId: "root",
   setDiagramId: (id) => set({ diagramId: id }),
 }));
+
+export default useDiagramStore;

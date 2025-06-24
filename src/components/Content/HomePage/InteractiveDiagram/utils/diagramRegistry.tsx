@@ -1,5 +1,5 @@
 import type { DiagramNode, DiagramEdge } from "../data/flow-types";
-import type { ElkLayoutOptions } from "./ElkLayout-utils"; 
+import type { ElkLayoutOptions } from "./elkLayout-utils"; 
 
 /**
  * Ein globales Objekt, das alle erstellten Diagramme speichert.
